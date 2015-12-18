@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <TextView
+        android:id="@+id/textView_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0b8893"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="Thursday"
+        android:textColor="#ffffff"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_full_day_month_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#12a5b3"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:text="AUG"
+            android:textColor="#ffffff"
+            android:textSize="23.9sp" />
+
+        <TextView
+            android:id="@+id/textView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:text="13"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ffffff"
+            android:textSize="79.8sp" />
+
+        <TextView
+            android:id="@+id/textView_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:text="2015"
+            android:textColor="#ffffff"
+            android:textIsSelectable="false"
+            android:textSize="23.9sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/calendar_date_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="current date"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#df000000"
+        android:textSize="14sp" />
+
+    <GridView
+        android:id="@+id/calendar_days_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="1dp"
+        android:numColumns="7"
+        android:stretchMode="columnWidth" />
+    <ViewSwitcher
+        android:id="@+id/calendar_switcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <GridView
+            android:id="@+id/calendar_grid"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:horizontalSpacing="1dp"
+            android:numColumns="7"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="1dp"
+            android:clickable="false" />
+    </ViewSwitcher>
+    <RelativeLayout
+        android:id="@+id/calendar_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_toLeftOf="@+id/button_ok"
+            android:layout_toStartOf="@+id/button_ok"
+            android:background="#ffffff"
+            android:padding="10dp"
+            android:text="CANCEL"
+            android:textColor="#12a5b3" />
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#ffffff"
+            android:padding="10dp"
+            android:text="OK"
+            android:textColor="#12a5b3" />
+    </RelativeLayout>
+
+</LinearLayout>
